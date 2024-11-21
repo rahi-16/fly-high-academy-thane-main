@@ -370,16 +370,62 @@
   justify-content: center;
 }
 
+/* Container for the icons */
 .icon-container {
+  position: fixed;
+  right: 20px; /* Position on the right side */
+  bottom: 20px; /* Position at the bottom */
   display: flex;
-  flex-direction: row; /* Horizontal alignment */
-  gap: 15px; /* Space between icons */
+  flex-direction: column; /* Stack icons vertically */
+  gap: 15px; /* Space between the icons */
+  z-index: 100;
 }
 
-.bx-mouse {
-  margin-right: -3px;
-  font-size: 1.7rem !important;
+/* Style for each icon container */
+.go-up {
+  width: 3rem; /* Size of the icon container */
+  height: 3rem; /* Size of the icon container */
+  border-radius: 50%; /* Make it round */
+  color: white; /* Icon color */
+  background-color: #2f58cd; /* Background color of the icon */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  cursor: pointer; /* Cursor pointer */
+  transition: all 0.3s; /* Smooth transition on hover */
+  display: flex; /* Flexbox to center the icon */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
 }
+
+/* Hover effect */
+.go-up:hover {
+  transform: scale(1.1) translateY(-0.5rem);
+  color: #ffbf00; /* Icon color on hover */
+}
+
+/* Chevron icon size */
+.bxs-chevron-up,
+.bxl-whatsapp {
+  font-size: 1.5rem; /* Set a default icon size */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .icon-container {
+    right: 10px; /* Adjust positioning on mobile for better visibility */
+    bottom: 10px; /* Adjust bottom position for mobile */
+  }
+
+  .go-up {
+    width: 2.5rem; /* Smaller icon container on mobile */
+    height: 2.5rem; /* Smaller icon container on mobile */
+  }
+
+  .bxs-chevron-up,
+  .bxl-whatsapp {
+    font-size: 1.2rem; /* Slightly smaller icons on mobile */
+  }
+}
+
 
 .so a {
   color: #144272 !important;
