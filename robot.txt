@@ -1,0 +1,6 @@
+# Allow all search engines to crawl everything
+User-agent: *
+Disallow:
+
+# Specify the location of the sitemap (if you have one)
+Sitemap: https://flyhighthane.com/sitemap.xml
