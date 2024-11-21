@@ -46,6 +46,9 @@ Whether you aim to be a pilot, cabin crew member, or aviation manager, Fly High 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <title>Contact Us</title>
+	  .display-none {
+  display: none;
+}
   </head>
   <body>
 	
@@ -158,7 +161,12 @@ Whether you aim to be a pilot, cabin crew member, or aviation manager, Fly High 
           </nav>
         </div>
       </div>
-
+<script>
+  document.querySelector('.navigation__checkbox').addEventListener('change', function() {
+    const navList = document.querySelector('.navigation__list');
+    navList.classList.toggle('display-none', !this.checked);
+  });
+</script>
       <!-- --------------------------------------- -->
     </header>
 
